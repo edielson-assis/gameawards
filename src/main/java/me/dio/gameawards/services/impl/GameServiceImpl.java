@@ -1,4 +1,4 @@
-package me.dio.diogameawards.services.impl;
+package me.dio.gameawards.services.impl;
 
 import java.util.List;
 import java.util.Objects;
@@ -9,11 +9,11 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
-import me.dio.diogameawards.domain.model.Game;
-import me.dio.diogameawards.repositories.GameRepository;
-import me.dio.diogameawards.services.GameService;
-import me.dio.diogameawards.services.exceptions.BusinessException;
-import me.dio.diogameawards.services.exceptions.ResourceNotFoundException;
+import me.dio.gameawards.domain.model.Game;
+import me.dio.gameawards.repositories.GameRepository;
+import me.dio.gameawards.services.GameService;
+import me.dio.gameawards.services.exceptions.BusinessException;
+import me.dio.gameawards.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class GameServiceImpl implements GameService {
@@ -33,11 +33,11 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public void insert(Game game) {
+    public Game insert(Game game) {
         if (Objects.nonNull(game.getId())) {
-            throw  new BusinessException("Not null id");
+            throw  new BusinessException("Id is not null");
         } 
-        repository.save(game);        
+        return repository.save(game);        
     }
 
     @Override

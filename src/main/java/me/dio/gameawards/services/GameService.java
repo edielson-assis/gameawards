@@ -1,8 +1,8 @@
-package me.dio.diogameawards.services;
+package me.dio.gameawards.services;
 
 import java.util.List;
 
-import me.dio.diogameawards.domain.model.Game;
+import me.dio.gameawards.domain.model.Game;
 
 public interface GameService {
     
@@ -10,7 +10,7 @@ public interface GameService {
 
     Game findById(long id);
     
-    void insert(Game game);
+    Game insert(Game game);
     
     void update(Long id, Game game);
     

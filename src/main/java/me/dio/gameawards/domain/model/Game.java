@@ -1,4 +1,4 @@
-package me.dio.diogameawards.domain.model;
+package me.dio.gameawards.domain.model;
 
 import java.io.Serializable;
 

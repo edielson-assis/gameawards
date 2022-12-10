@@ -1,12 +1,12 @@
-package me.dio.diogameawards.config;
+package me.dio.gameawards.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import me.dio.diogameawards.domain.model.Game;
-import me.dio.diogameawards.repositories.GameRepository;
+import me.dio.gameawards.domain.model.Game;
+import me.dio.gameawards.repositories.GameRepository;
 
 @Configuration
 @Profile("test")

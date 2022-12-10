@@ -1,9 +1,9 @@
-package me.dio.diogameawards.repositories;
+package me.dio.gameawards.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import me.dio.diogameawards.domain.model.Game;
+import me.dio.gameawards.domain.model.Game;
 
 @Repository
 public interface GameRepository extends JpaRepository<Game, Long> {  
