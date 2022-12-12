@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -54,5 +55,11 @@ public class GameController {
     public ResponseEntity<Game> update(@PathVariable Long id, @RequestBody Game game) {
         service.update(id, game);
         return ResponseEntity.ok().body(game);
+    }
+
+    @PatchMapping(value = "/{id}/vote")
+    public ResponseEntity<Game> vote(@PathVariable Long id) {
+        service.vote(id);
+        return ResponseEntity.ok().build();
     }
 }
